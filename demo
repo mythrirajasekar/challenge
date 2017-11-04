@@ -15,6 +15,13 @@ item=sc1.nextLine();
 Scanner sc2=new Scanner(System.in);
 people=sc2.nextInt();
 
+System.out.println("Input:" +price +"," +item+ "," +people+)
+System.out.println("Base Price:" +price);
+//flat 5% for all items
+double flat5= price*(5/100);
+System.out.println("Flat markup: 5%" +flat5);
+System.out.println("Subtotal:" +(price+flat5));
+
 
 
 }
