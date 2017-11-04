@@ -3,11 +3,14 @@ import java.util.*;
 
 class pricePacakager
 {
+
 public static void main(String args[])
 {
 double price;
 String item;
 int people;
+
+//User Input
 Scanner sc=new Scanner(System.in);
 price=sc.nextFloat();
 Scanner sc1=new Scanner(System.in);
@@ -17,6 +20,7 @@ people=sc2.nextInt();
 
 System.out.println("Input:" +price +"," +item+ "," +people+)
 System.out.println("Base Price:" +price);
+
 //flat 5% for all items
 double flat5= price*(5/100);
 System.out.println("Flat markup: 5%" +flat5);
@@ -30,17 +34,32 @@ int percent= people * 1.2;
 double personmarkup= subtotal*(percent/100);
 
 System.out.println("Person Markup:" +(personmarkup));
+double typemarkup=0.0,
+double total1;
 
+//item type markup
 switch(item.toLowercase())
 {
 case "food":
-    double typemarkup= subtotal*(13/100);
-    double total1=total(typemarkup,subtotal,personmarkup);
-    
-
+    typemarkup= subtotal*(13/100);
+    total1=total(typemarkup,subtotal,personmarkup);
+    System.out.println("Total:" +total1);
+    break;
+ case "pharmaceutical":
+    typemarkup= subtotal*(7.5/100);
+    total1=total(typemarkup,subtotal,personmarkup);
+    System.out.println("Total:" +total1);
+    break;
+ case "electronic":
+    typemarkup= subtotal*(2/100);
+    total1=total(typemarkup,subtotal,personmarkup);
+    System.out.println("Total:" +total1);
+    break;  
+ default:
+    total1=total(typemarkup,subtotal,personmarkup);
+    System.out.println("Total:" +total1);
+    break;      
 }
-
-
 
 }
 public static double total(double typemarkup, double subtotal, double personmarkup);
