@@ -20,7 +20,18 @@ System.out.println("Base Price:" +price);
 //flat 5% for all items
 double flat5= price*(5/100);
 System.out.println("Flat markup: 5%" +flat5);
-System.out.println("Subtotal:" +(price+flat5));
+
+//subtotal
+double subtotal=price+flat5;
+System.out.println("Subtotal:" +(subtotal));
+
+//persons markup
+int percent= people * 1.2;
+double personmarkup= subtotal*(percent/100);
+
+System.out.println("Person Markup:" +(personmarkup));
+
+
 
 
 
