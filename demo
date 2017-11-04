@@ -1,1 +1,21 @@
 import java.io.*;
+import java.util.*;
+
+class pricePacakager
+{
+public static void main(String args[])
+{
+double price;
+String item;
+int people;
+Scanner sc=new Scanner(System.in);
+price=sc.nextFloat();
+Scanner sc1=new Scanner(System.in);
+item=sc1.nextLine();
+Scanner sc2=new Scanner(System.in);
+people=sc2.nextInt();
+
+
+
+}
+}
