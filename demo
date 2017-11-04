@@ -31,9 +31,21 @@ double personmarkup= subtotal*(percent/100);
 
 System.out.println("Person Markup:" +(personmarkup));
 
+switch(item.toLowercase())
+{
+case "food":
+    double typemarkup= subtotal*(13/100);
+    double total1=total(typemarkup,subtotal,personmarkup);
+    
 
+}
 
 
 
 }
+public static double total(double typemarkup, double subtotal, double personmarkup);
+{
+ return typemarkup+subtotal+personmarkup;
+}
+
 }
